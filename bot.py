@@ -21,7 +21,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
-genai.configure(api_key="AIzaSyBFMZz1V6Wdbcw2upd9Uq_8WgUWi1MuIxg")
+genai.configure(api_key="")
 model = genai.GenerativeModel('gemini-2.0-flash')
 
 
@@ -61,4 +61,4 @@ async def on_message(message):
             print(f"❌ Error: {e}")
             await message.channel.send("⚠️ Ocurrió un error al procesar tu solicitud.")
 
-client.run("MTI4OTYzMjg1NTAzMDQ5NzM3MQ.GG85q2.CaWFpt0mSANiwhIru4yfeoZN0uKHCYXAZHp3BM")
+client.run()
